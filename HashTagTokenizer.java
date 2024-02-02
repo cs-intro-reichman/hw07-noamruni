@@ -13,9 +13,8 @@ public class HashTagTokenizer {
         String[] dictionary = new String[3000];
 
         In in = new In(fileName);
-        String[] sourceDictionary = in.readAllStrings();
         for (int i = 0; i < dictionary.length; i++) {
-            dictionary[i] = sourceDictionary[i];
+            dictionary[i] = in.readString();
         }
         return dictionary;
     }
@@ -51,5 +50,4 @@ public class HashTagTokenizer {
             }
         }
     }
-
 }
